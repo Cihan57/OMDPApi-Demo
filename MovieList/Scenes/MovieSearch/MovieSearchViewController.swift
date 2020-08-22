@@ -23,9 +23,6 @@ final class MovieSearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
-        // Do any additional setup after loading the view.
     }
     
     func getMovieList(searchText:String){
@@ -58,8 +55,8 @@ extension MovieSearchViewController: MovieSearchViewDelegate {
     
     func didSelect(at index: Int) {
         let movie = movieList[index]
-//        let movieDetailViewController = MovieDetailBuilder.make(with: movie)
-//        show(movieDetailViewController, sender: nil)
+        let movieDetailViewController = MovieDetailBuilder.make(with: movie)
+        show(movieDetailViewController, sender: nil)
     }
     
     

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Movie Detail View Controller-->
+        <scene sceneID="qxW-Vh-dMl">
+            <objects>
+                <viewController storyboardIdentifier="MovieDetailViewController" id="a9K-Ti-WIV" customClass="MovieDetailViewController" customModule="MovieGuide" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ggP-xK-yrn" customClass="MovieDetailView" customModule="MovieGuide" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CAR-2J-iUo">
+                                <rect key="frame" x="0.0" y="44" width="414" height="313.5"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yVh-NP-cdj">
+                                <rect key="frame" x="16" y="257.5" width="138.5" height="220"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="yVh-NP-cdj" secondAttribute="height" multiplier="300:477" id="OKT-si-iRN"/>
+                                    <constraint firstAttribute="height" constant="220" id="qCI-LR-YRn"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Batman Begins The Dark Knight " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6e-ve-dHx">
+                                <rect key="frame" x="162.5" y="257.5" width="243.5" height="53"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="JXs-fZ-y3I">
+                                <rect key="frame" x="182" y="423" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9WY-5W-X1I"/>
+                                    <constraint firstAttribute="width" constant="50" id="CUY-ia-CZv"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wF8-dt-4mf" firstAttribute="trailing" secondItem="CAR-2J-iUo" secondAttribute="trailing" id="34R-Sl-BoS"/>
+                            <constraint firstItem="JXs-fZ-y3I" firstAttribute="centerY" secondItem="ggP-xK-yrn" secondAttribute="centerY" id="4wb-4V-C3k"/>
+                            <constraint firstItem="CAR-2J-iUo" firstAttribute="top" secondItem="wF8-dt-4mf" secondAttribute="top" id="Hcq-oU-LUM"/>
+                            <constraint firstAttribute="trailing" secondItem="h6e-ve-dHx" secondAttribute="trailing" constant="8" id="U2g-1e-pXu"/>
+                            <constraint firstItem="h6e-ve-dHx" firstAttribute="leading" secondItem="yVh-NP-cdj" secondAttribute="trailing" constant="8" id="bB3-xT-g1t"/>
+                            <constraint firstItem="JXs-fZ-y3I" firstAttribute="centerX" secondItem="ggP-xK-yrn" secondAttribute="centerX" id="btb-IN-Joe"/>
+                            <constraint firstItem="yVh-NP-cdj" firstAttribute="top" secondItem="CAR-2J-iUo" secondAttribute="bottom" constant="-100" id="czQ-gc-Bdw"/>
+                            <constraint firstItem="CAR-2J-iUo" firstAttribute="height" secondItem="ggP-xK-yrn" secondAttribute="height" multiplier="0.35" id="iOG-nZ-8nE"/>
+                            <constraint firstItem="yVh-NP-cdj" firstAttribute="leading" secondItem="wF8-dt-4mf" secondAttribute="leading" constant="16" id="p4Q-nw-u8z"/>
+                            <constraint firstItem="CAR-2J-iUo" firstAttribute="leading" secondItem="wF8-dt-4mf" secondAttribute="leading" id="sVw-Sc-NUL"/>
+                            <constraint firstItem="h6e-ve-dHx" firstAttribute="top" secondItem="yVh-NP-cdj" secondAttribute="top" id="uGu-Dn-oyM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wF8-dt-4mf"/>
+                        <connections>
+                            <outlet property="blurImageView" destination="CAR-2J-iUo" id="kt0-5w-tbM"/>
+                            <outlet property="indicatorView" destination="JXs-fZ-y3I" id="jLc-j6-ws2"/>
+                            <outlet property="posterImageView" destination="yVh-NP-cdj" id="6xn-AL-jL6"/>
+                            <outlet property="titleLabel" destination="h6e-ve-dHx" id="SF9-iP-ibO"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="movieDetailView" destination="ggP-xK-yrn" id="GAx-TY-c4p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hHM-Mi-vso" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-30.434782608695656" y="73.660714285714278"/>
+        </scene>
+    </scenes>
+</document>
